@@ -52,7 +52,7 @@ public class ADS1 {
     }
 }
 */
-
+ /*
 import  java.util.Scanner;
 public class ADS1 {
     public static void main(String[] args) {
@@ -71,5 +71,51 @@ public class ADS1 {
         return number + sumIntenger(number - 1);
     }
 }
+*/
+/*
+import java.util.Scanner;
+public class ADS1 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введите основание:");
+        int b = input.nextInt();
+        System.out.println("Введите n показатель:");
+        int n = input.nextInt();
+        int result = sumPowers(b, n);
+        System.out.println(" = " + result);
+        input.close();
+    }
+    public static int power(int a, int x) {
+        if (x == 0) return 1;
+        return a * power(a, x - 1);
+    }
+    public static int sumPowers(int a, int x) {
+        if (x == 0) {
+            System.out.print(a + "^0");
+            return 1;
+        }
+        int sum = sumPowers(a, x - 1);
+        System.out.print(" + " + a + "^" + x);
+        return power(a, x) + sum;
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
