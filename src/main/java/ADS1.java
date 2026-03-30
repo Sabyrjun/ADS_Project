@@ -1,2 +1,2 @@
-public class ADS1 {2123
+public class ADS1 {0000
 }
