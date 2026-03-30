@@ -100,22 +100,47 @@ public class ADS1 {
     }
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+import java.util.Scanner;
+public class ADS1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Введите количество элементов N: ");
+        int n = input.nextInt();
+        System.out.println("Введите последовательность:");
+        reversePrint(n, input);
+        input.close();
+    }
+    public static void reversePrint(int n, Scanner input) {
+        if (n <= 0) {
+            return;
+        }
+        int current = input.nextInt();
+        reversePrint(n - 1, input);
+        System.out.print(current + " ");
+    }
+}
+*/
+/*
+import java.util.Scanner;
+public class ADS1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        if (input.hasNextInt()) {
+            int n = input.nextInt();
+            // Чистим буфер после nextInt(), чтобы он не мешал читать строки
+            input.nextLine();
+            reverseStrings(n, input);
+        }
+        input.close();
+    }
+    public static void reverseStrings(int n, Scanner sc) {
+        if (n <= 0) {
+            return;
+        }
+        String current = sc.nextLine();
+        reverseStrings(n - 1, sc);
+        System.out.println(current);
+    }
+}
+*/
