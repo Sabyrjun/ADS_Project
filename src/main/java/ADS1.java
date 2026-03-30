@@ -57,6 +57,7 @@ import  java.util.Scanner;
 public class ADS1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("Введите число:");
         int n = input.nextInt();
         int result = sumIntenger(n);
         System.out.println("Сумма первых n чисел: " + result);
