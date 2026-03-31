@@ -22,6 +22,8 @@ public class ADS1 {
 }
 */
 
+import java.util.Scanner;
+
 /*
 import  java.util.Scanner;
 public class ADS1 {
@@ -144,3 +146,85 @@ public class ADS1 {
     }
 }
 */
+/*
+import java.util.Scanner;
+
+public class ADS1{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[][] matrix = new int[n][n];
+        fillSpiral(matrix, 0, 0, n, 1);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void fillSpiral(int[][] matrix, int row, int col, int size, int num) {
+        if (size <= 0) return;
+        if (size == 1) {
+            matrix[row][col] = num;
+            return;
+        }
+
+        //ВС (слева направо)
+        for (int i = 0; i < size - 1; i++) {
+            matrix[row][col + i] = num++;
+        }
+
+        //ПС (сверху вниз)
+        for (int i = 0; i < size - 1; i++) {
+            matrix[row + i][col + size - 1] = num++;
+        }
+
+        //НС (справа налево)
+        for (int i = 0; i < size - 1; i++) {
+            matrix[row + size - 1][col + size - 1 - i] = num++;
+        }
+
+        //ЛC (снизу вверх)
+        for (int i = 0; i < size - 1; i++) {
+            matrix[row + size - 1 - i][col] = num++;
+        }
+        fillSpiral(matrix, row + 1, col + 1, size - 2, num);
+    }
+}
+*/
+public class ADS1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        int y = input.nextInt();
+        int row = (int) Math.pow(x, y);
+        int[][] matrix = new int[row][y];
+        queue(matrix, x, y, row);
+    }
+
+    public static void queue(int[][] matrix, int a, int b, int row) {
+        for (int i = 0; i < row; i++) {
+            for(int j = 0; j < b; j++){
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
