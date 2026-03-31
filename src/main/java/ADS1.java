@@ -228,6 +228,65 @@ public class ADS1 {
     }
 }
 */
+/*
+import java.util.Scanner;
+public class ADS1 {
+    public static void main(String[] args){
+        Scanner input  = new Scanner(System.in);
+        String word = input.next();
+        int n = word.length();
+        char[] chars = word.toCharArray();
+
+        queue(chars, 0 , n-1);
+    }
+    public static void queue(char[] chars, int left, int right){
+        if (left == right){
+            System.out.println(String.valueOf(chars));
+            return;
+        }
+        for (int i = left; i <= right; i++){
+            swap(chars, left, i);
+            queue(chars, left+1, right);
+            swap(chars, left, i);
+        }
+    }
+    public static void swap(char[] arr, int i, int j){
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+*/
+/*
+import java.util.Scanner;
+
+public class ADS1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        if (input.hasNextInt()) {
+            int n = input.nextInt();
+            if (isPowerOfTwo(n)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+
+    // Рекурсивная функция с одним параметром, как в условии
+    public static boolean isPowerOfTwo(int n) {
+        if (n == 1) {
+            return true;
+        }
+        if (n <= 0 || n % 2 != 0) {
+            return false;
+        }
+        return isPowerOfTwo(n / 2);
+    }
+}
+*/
+
+
 
 
 
