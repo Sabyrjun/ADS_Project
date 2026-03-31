@@ -193,25 +193,41 @@ public class ADS1{
     }
 }
 */
+/*
 public class ADS1 {
+    // Переменная, которая будет помнить, в какую строку матрицы мы сейчас пишем
+    static int currentRow = 0;
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int x = input.nextInt();
-        int y = input.nextInt();
-        int row = (int) Math.pow(x, y);
-        int[][] matrix = new int[row][y];
-        queue(matrix, x, y, row);
+        int n = input.nextInt();
+        int k = input.nextInt();
+        int totalRows = (int) Math.pow(k, n);
+        int[][] matrix = new int[totalRows][n];
+        int[] currentCombo = new int[n];
+        generate(0, n, k, currentCombo, matrix);
+        for (int i = 0; i < totalRows; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
-    public static void queue(int[][] matrix, int a, int b, int row) {
-        for (int i = 0; i < row; i++) {
-            for(int j = 0; j < b; j++){
-
+    public static void generate(int index, int n, int k, int[] currentCombo, int[][] matrix) {
+        if (index == n) {
+            for (int i = 0; i < n; i++) {
+                matrix[currentRow][i] = currentCombo[i];
             }
+            currentRow++;
+            return;
+        }
+        for (int i = 1; i <= k; i++) {
+            currentCombo[index] = i;
+            generate(index + 1, n, k, currentCombo, matrix);
         }
     }
 }
-
+*/
 
 
 
