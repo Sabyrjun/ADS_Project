@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class ADS1 {
     public static void main(String[] args) {
         System.out.println("===== ТЕСТИРОВАНИЕ БИНАРНОГО ДЕРЕВА =====");
@@ -191,8 +193,6 @@ class BinarySearchTree {
     }
 }
 
-
-import java.util.LinkedList;
 
 class HashTable {
     private LinkedList<Integer>[] table;
